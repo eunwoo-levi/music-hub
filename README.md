@@ -8,7 +8,7 @@
 - tailwind-merge
 - shadcn-UI     // + next-themes (dark mode) , 여러가지 UI
 
-< CSS > - 반응형 디자
+< CSS > - 반응형 디자인
 - tailwind
 
 < 상태관리 >
