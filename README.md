@@ -4,7 +4,7 @@
 - react-spinners
 - react-icons
 - tailwind-merge
-- shadcn-UI
+- shadcn-UI     // + next-themes (dark mode)
 
 < CSS >
 - tailwind
