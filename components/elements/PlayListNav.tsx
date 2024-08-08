@@ -20,7 +20,7 @@ interface playlistProps {
 }
 
 export default function PlayListNav({ playlist }: playlistProps) {
-  const { id, owner, playlistName, songlist } = playlist;
+  const { id, owner, playlistName } = playlist;
 
   const onClickPlay = () => {};
 
