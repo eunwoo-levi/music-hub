@@ -6,9 +6,9 @@
 - react-spinners
 - react-icons
 - tailwind-merge
-- shadcn-UI     // + next-themes (dark mode)
+- shadcn-UI     // + next-themes (dark mode) , 여러가지 UI
 
-< CSS >
+< CSS > - 반응형 디자
 - tailwind
 
 < 상태관리 >
