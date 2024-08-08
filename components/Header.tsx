@@ -2,6 +2,37 @@ import Image from "next/image";
 import { ReactNode } from "react";
 import UserIcon from "./UserIcon";
 import PagePadding from "./PagePadding";
+import { FaChromecast } from "react-icons/fa";
+import { FiSearch } from "react-icons/fi";
+
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import Logo from "./elements/Logo";
+import Navigator from "./elements/Navigator";
+
+const HeaderDrawer = ({ children }: { children: ReactNode }) => {
+  return (
+    <Drawer direction="left">
+      <DrawerTrigger>{children}</DrawerTrigger>
+      <DrawerContent className="w-[240px] h-full">
+        <div className="py-3">
+          <div className="px-3">
+            <Logo />
+          </div>
+          <Navigator />
+        </div>
+      </DrawerContent>
+    </Drawer>
+  );
+};
 
 export default function Header({ children }: { children: ReactNode }) {
   return (
@@ -22,8 +53,27 @@ export default function Header({ children }: { children: ReactNode }) {
       {/*Search Section */}
       <section className="sticky">
         <PagePadding>
-          Search Section
-          <UserIcon />
+          <div className="h-[64px] flex flex-row justify-between items-center">
+            <article className="h-[42px] min-w-[480px] hidden lg:flex flex-row items-center bg-slate-800 opacity-50 rounded-2xl px-[16px] gap-[16px]">
+              <div>
+                <FiSearch size={24} />
+              </div>
+              <input
+                className="w-full h-full bg-slate-800 opacity-50"
+                placeholder="노래, 앨범, 아티스트, 팟캐스트 검색"
+                type="text"
+              />
+            </article>
+            <HeaderDrawer>
+              <article className="lg:hidden">
+                <Logo />
+              </article>
+            </HeaderDrawer>
+            <article className="flex flex-row gap-6 items-center">
+              <FaChromecast size={26} />
+              <UserIcon />
+            </article>
+          </div>
         </PagePadding>
       </section>
       <section className="relative">{children}</section>
