@@ -4,6 +4,7 @@
 - react-spinners
 - react-icons
 - tailwind-merge
+- shadcn-UI
 
 < CSS >
 - tailwind
