@@ -26,7 +26,6 @@ export default function PlayListNav({ playlist }: playlistProps) {
 
   return (
     <li
-      key={id}
       className="mx-3 px-4 h-[56px] flex flex-row justify-between items-center 
       hover:bg-neutral-700 rounded-lg group"
     >
