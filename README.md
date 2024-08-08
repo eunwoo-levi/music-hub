@@ -1,3 +1,21 @@
+**Next.JS 를 이용한 Music play Website**
+
+< 라이브러리 >
+- react-spinners
+- react-icons
+- tailwind-merge
+
+< CSS >
+- tailwind
+
+< 상태관리 >
+- zustand
+
+
+
+
+
+***
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
