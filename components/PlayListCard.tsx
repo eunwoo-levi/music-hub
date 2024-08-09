@@ -32,7 +32,7 @@ export default function PlayListCard({ playlist }: { playlist: Playlist }) {
           </div>
           <div
             onClick={onClickPlay}
-            className="absolute bottom-0 right-4 flex justify-center items-center transform-gpu transition-transform hover:scale-110 bg-[rgba(0,0,0,0.7)] w-[40px] h-[40px] rounded-full hover:bg-[rgba(0,0,0,0.9) pl-1"
+            className="absolute bottom-4 right-4 flex justify-center items-center transform-gpu transition-transform hover:scale-110 bg-[rgba(0,0,0,0.7)] w-[40px] h-[40px] rounded-full hover:bg-[rgba(0,0,0,0.9) pl-1"
           >
             <FiPlay size={22} color="red" />
           </div>

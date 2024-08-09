@@ -32,8 +32,7 @@ const HeaderDrawer = ({ children }: { children: ReactNode }) => {
 };
 
 export default function Header({ children }: { children: ReactNode }) {
-  const { homeCategory, headerImageSrc, setHomeCategory, setHeaderImageSrc } =
-    useUIState();
+  const { headerImageSrc } = useUIState();
 
   const [isScrolled, setIsScrolled] = useState(false);
   const headRef = useRef<HTMLDivElement>(null);
