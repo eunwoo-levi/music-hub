@@ -7,19 +7,11 @@ import PagePadding from "./PagePadding";
 import { FaChromecast } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import Logo from "./elements/Logo";
 import Navigator from "./elements/Navigator";
 import { cn } from "@/lib/utils";
+import { useUIState } from "@/hooks/useUIState";
 
 const HeaderDrawer = ({ children }: { children: ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,6 +32,9 @@ const HeaderDrawer = ({ children }: { children: ReactNode }) => {
 };
 
 export default function Header({ children }: { children: ReactNode }) {
+  const { homeCategory, headerImageSrc, setHomeCategory, setHeaderImageSrc } =
+    useUIState();
+
   const [isScrolled, setIsScrolled] = useState(false);
   const headRef = useRef<HTMLDivElement>(null);
 
@@ -65,7 +60,10 @@ export default function Header({ children }: { children: ReactNode }) {
           <Image
             className="object-cover"
             fill
-            src="https://bloximages.newyork1.vip.townnews.com/dailytitan.com/content/tncms/assets/v3/editorial/6/3b/63b9ede6-56f6-11ec-b3f2-3fac8e9950df/61aeaeb273317.image.jpg?resize=1333%2C757"
+            src={
+              headerImageSrc ||
+              "https://bloximages.newyork1.vip.townnews.com/dailytitan.com/content/tncms/assets/v3/editorial/6/3b/63b9ede6-56f6-11ec-b3f2-3fac8e9950df/61aeaeb273317.image.jpg?resize=1333%2C757"
+            }
             alt="Header"
           />
           <div className="absolute h-[400px] top-0 bg-black opacity-40 w-full" />

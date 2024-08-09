@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "*townnews.com",
       },
+      {
+        protocol: "https",
+        hostname: "*unsplash.com",
+      },
     ],
   },
 };
