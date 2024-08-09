@@ -1,3 +1,3 @@
 export default async function HomePage() {
-  return <div>Page</div>;
+  return <div className="min-h-[600px]">HomePage</div>;
 }
