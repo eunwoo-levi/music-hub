@@ -28,7 +28,7 @@ export default function Category() {
         <li
           key={item.label}
           className={cn(
-            "h-[38px] min-w-fit px-1 flex justify-center items-center border border-transparent rounded-lg bg-[rgba(144,144,144,0.2)] hover:bg-[rgba(144,144,144,0.45)] cursor-pointer",
+            "h-[38px] min-w-fit flex justify-center items-center border border-transparent rounded-lg bg-[rgba(144,144,144,0.2)] hover:bg-[rgba(144,144,144,0.45)] cursor-pointer",
             item.label === homeCategory && "bg-white text-black hover:bg-white"
           )}
           onClick={() => onClickCategory(item)}
