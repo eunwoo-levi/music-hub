@@ -7,6 +7,7 @@
 - react-icons
 - tailwind-merge
 - shadcn-UI     // + next-themes (dark mode) , 여러가지 UI
+- react-use     // 영상 audio 등 활용
 
 < CSS > - 반응형 디자인
 - tailwind
