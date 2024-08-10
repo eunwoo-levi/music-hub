@@ -1,13 +1,8 @@
 import PagePadding from "@/components/PagePadding";
 import Category from "./components/Category";
-import {
-  dymmyGenreList,
-  getAllPlaylist,
-  getSongListTop10,
-} from "@/lib/dummyData";
+import { getAllPlaylist, getSongListTop10 } from "@/lib/dummyData";
 import PlayListCarousel from "@/components/PlayListCarousel";
 import SongListCarousel from "@/components/SongListCarousel";
-import GenreListCarousel from "@/components/GenreListCarousel";
 
 export default async function ExplorePage() {
   /*
@@ -34,9 +29,7 @@ export default async function ExplorePage() {
       <div className="mt-20">
         <SongListCarousel title="인기곡" songListTop10={songListTop10} />
       </div>
-      <div className="mt-20">
-        <GenreListCarousel genreList={dymmyGenreList} title="분위기 및 장르" />
-      </div>
+      <div className="mt-20"></div>
       <div className="mt-20"></div>
     </PagePadding>
   );
