@@ -25,7 +25,12 @@ export default function PlayListCard({ playlist }: { playlist: Playlist }) {
   return (
     <article className="h-[240px] cursor-pointer group">
       <section onClick={onClickCard} className="relative h-[136px]">
-        <Image fill src={imgSrc} alt="thumbnail" className="object-cover" />
+        <Image
+          fill
+          src={imgSrc}
+          alt="thumbnail"
+          className="object-cover rounded-md"
+        />
         <div className="hidden relative group-hover:block bg-gradient-to-b from-[rgba(0,0,0,0.7)] top-0 w-full h-[136px]">
           <div className="absolute top-0 right-4">
             <IconButton icon={<MdMoreVert size={20} />} />
