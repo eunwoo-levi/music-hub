@@ -3,15 +3,15 @@
 import { cn } from "@/lib/utils";
 
 interface WhiteButtonProps {
-  icon: any;
+  icon?: any;
   label: string;
-  className: any;
+  className?: any;
 }
 
 export default function WhiteButton({
-  icon,
+  icon = <></>,
   label,
-  className,
+  className = "",
   ...props
 }: WhiteButtonProps) {
   return (

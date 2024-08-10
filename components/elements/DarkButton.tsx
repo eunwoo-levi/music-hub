@@ -3,15 +3,15 @@
 import { cn } from "@/lib/utils";
 
 interface DarkButtonProps {
-  icon: any;
+  icon?: any;
   label: string;
-  className: any;
+  className?: any;
 }
 
 export default function DarkButton({
-  icon,
+  icon = <></>,
   label,
-  className,
+  className = "",
   ...props
 }: DarkButtonProps) {
   return (
