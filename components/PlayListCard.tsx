@@ -7,19 +7,23 @@ import { useRouter } from "next/navigation";
 import { FiPlay } from "react-icons/fi";
 import { MdMoreVert } from "react-icons/md";
 import IconButton from "./elements/IconButton";
+import { usePlayerState } from "@/hooks/usePlayerState";
+import { MouseEvent } from "react";
 
 export default function PlayListCard({ playlist }: { playlist: Playlist }) {
-  const { id, owner, playlistName, songList } = playlist;
+  const { addSongList } = usePlayerState();
+  const { id, owner = "", playlistName = "", songList = [] } = playlist;
   const songListLen = songList?.length;
   const imgSrc = getRandomElementArray(songList).imageSrc;
   const { push } = useRouter();
 
-  const onClickCard = () => {
+  const onClickCard = (e: MouseEvent<HTMLElement>) => {
+    e.stopPropagation();
     push(`/playlist?list=${id}`);
   };
 
   const onClickPlay = () => {
-    // playMusic
+    addSongList(songList);
   };
 
   return (
@@ -27,7 +31,10 @@ export default function PlayListCard({ playlist }: { playlist: Playlist }) {
       <section onClick={onClickCard} className="relative h-[136px]">
         <Image
           fill
-          src={imgSrc}
+          src={
+            imgSrc ||
+            "https://bloximages.newyork1.vip.townnews.com/dailytitan.com/content/tncms/assets/v3/editorial/6/3b/63b9ede6-56f6-11ec-b3f2-3fac8e9950df/61aeaeb273317.image.jpg?resize=1333%2C757"
+          }
           alt="thumbnail"
           className="object-cover rounded-md"
         />

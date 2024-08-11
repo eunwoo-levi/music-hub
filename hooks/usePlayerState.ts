@@ -3,7 +3,7 @@ import { Song } from "@/types";
 import { create } from "zustand";
 
 interface PlayerState{
-    isVisiblePlayer:boolean;
+    isVisiblePlayer:false;
     activeSong?:Song| null 
     prevPlayerQueue:Song[] 
     nextPlayerQueue:Song[]
@@ -15,7 +15,7 @@ interface PlayerState{
 
 export const usePlayerState= create<PlayerState>((set)=>({
     isVisiblePlayer:true,
-    activeSong:dummyAllSongList[0],
+    activeSong:null,
     prevPlayerQueue:[],
     nextPlayerQueue:[],
     setIsVisiblePlayer:(isVisiblePlayer:boolean)=>set({isVisiblePlayer}),
