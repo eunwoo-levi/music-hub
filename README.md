@@ -13,7 +13,7 @@
 - tailwind
 
 < 상태관리 >
-- zustand
+- zustand  (음악 담을때, 음악 prev, next로 이동, 상태 유지)
 
 
 
