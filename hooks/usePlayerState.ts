@@ -1,3 +1,4 @@
+import { dummyAllSongList } from "@/lib/dummyData";
 import { Song } from "@/types";
 import { create } from "zustand";
 
@@ -14,7 +15,7 @@ interface PlayerState{
 
 export const usePlayerState= create<PlayerState>((set)=>({
     isVisiblePlayer:true,
-    activeSong:null,
+    activeSong:dummyAllSongList[0],
     prevPlayerQueue:[],
     nextPlayerQueue:[],
     setIsVisiblePlayer:(isVisiblePlayer:boolean)=>set({isVisiblePlayer}),
@@ -26,7 +27,7 @@ export const usePlayerState= create<PlayerState>((set)=>({
         return{
             activeSong:currentSong,
             prevPlayerQueue: prevSong?[prevSong, ...prev.prevPlayerQueue]:prev.prevPlayerQueue,
-            nextPlayerQueue:cloneSongList,
+            nextPlayerQueue:[...cloneSongList],
             isVisiblePlayer:true
         }
     }),
