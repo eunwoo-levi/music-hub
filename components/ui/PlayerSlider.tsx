@@ -20,7 +20,7 @@ const PlayerSlider = React.forwardRef<
     <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">
       <SliderPrimitive.Range className="absolute h-full bg-[#FF0000]" />
     </SliderPrimitive.Track>
-    <SliderPrimitive.Thumb className="block h-5 w-5 bg-[#FF0000] rounded-full border-primary bg-background" />
+    <SliderPrimitive.Thumb className="block h-5 w-5 bg-[#FF0000] rounded-full border-primary" />
   </SliderPrimitive.Root>
 ));
 PlayerSlider.displayName = SliderPrimitive.Root.displayName;

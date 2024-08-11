@@ -7,6 +7,7 @@ import Image from "next/image";
 import { getRandomElementArray } from "@/lib/utils";
 import WhiteButton from "./elements/WhiteButton";
 import DarkButton from "./elements/DarkButton";
+import { usePlayerState } from "@/hooks/usePlayerState";
 
 interface PlayListHeadProps {
   playlist: {
@@ -17,9 +18,15 @@ interface PlayListHeadProps {
 }
 
 export default function PlayListHead({ playlist }: PlayListHeadProps) {
-  const { playlistName, owner, songList } = playlist || {};
+  const { playlistName, owner, songList } = playlist;
 
   const randomSong = getRandomElementArray(songList);
+
+  const { addSongList } = usePlayerState();
+
+  const onClickPlay = () => {
+    addSongList(songList);
+  };
 
   return (
     <section>
@@ -35,6 +42,7 @@ export default function PlayListHead({ playlist }: PlayListHeadProps) {
           </div>
           <ul className="hidden lg:flex flex-row gap-4 mt-4">
             <WhiteButton
+              onClick={onClickPlay}
               className={"w-[85px] text-[14px]"}
               icon={<FiPlay />}
               label="재생"
@@ -50,6 +58,7 @@ export default function PlayListHead({ playlist }: PlayListHeadProps) {
       </div>
       <ul className="flex flex-row gap-4 mt-4 lg:hidden">
         <WhiteButton
+          onClick={onClickPlay}
           className={"w-[85px] text-[14px]"}
           icon={<FiPlay />}
           label="재생"

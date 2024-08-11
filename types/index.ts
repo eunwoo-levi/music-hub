@@ -22,6 +22,6 @@ export  interface Channel {
     id:number;
     subscribers:number;
     name:string;
-    songlist:Song[];
+    songList:Song[];
     playlistArray:Playlist[];
 }
