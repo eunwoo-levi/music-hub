@@ -1,7 +1,7 @@
 "use client";
 
 import { usePlayerState } from "@/hooks/usePlayerState";
-import PlayerContent from "./playerContent";
+import PlayerContent from "./PlayerContent";
 
 export default function PlayerWrapper() {
   const { isVisiblePlayer } = usePlayerState();
